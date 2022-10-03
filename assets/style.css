@@ -424,6 +424,9 @@ footer a:hover {
         justify-content: space-between;
         height: auto;
     }
+    .container {
+        max-width: 100vw;
+    }
     .tolkien_logo {
         max-width: 290px;
         padding-left: 20px;
