@@ -1,0 +1,488 @@
+* {
+    --cor-citacao: #181717;
+    --cor-fundo: #4d4949;
+}
+body {
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+.mobileMenu {
+    display: none;
+}
+.menu {
+    position: fixed;
+    margin-top: 20vh;
+    left: 1;
+}
+.menu li {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+.menu a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333232;
+}
+.menu_bar {
+    width: 10px;
+    height: 2px;
+    background-color: #181717;
+    transition: width 0.5s linear;
+    
+}
+.menu a:hover {
+    color:#4b4848;
+    text-shadow: 0px 0px 3px #aca9a9;
+}
+.menu a:hover ~ .menu_bar {
+    width: 40px;
+    display: block;
+} 
+
+section {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 75vw;
+}
+.container .tolkien_logo img {
+    width: 290px;
+}
+.tolkien_logo {
+    display:flex;
+    align-items: center;
+}
+nav ul,
+nav li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 20px;
+}
+.tolkien_logo {
+    display: flex;
+    justify-content: center;
+}
+
+#slide {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.slide_tolkien {
+    display:block;
+    height: 350px;
+    width: 851px;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.slide_tolkien li {
+    list-style: none;
+    position: absolute;
+}
+
+.slide_tolkien img {
+    width: 100%;
+    height: 100%;
+    margin:auto;
+    opacity: 0;
+    visibility: hidden;
+}
+.slide_tolkien li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.slide_tolkien input {
+    display: none;
+}
+
+.slide_tolkien label {
+    position: absolute;
+    display: block;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+    cursor: pointer;
+    bottom: 10px;
+    transition: ease;
+}
+.slide_tolkien label:hover {
+    background-color: var(--cor-fundo);
+}
+
+.slide_tolkien li:nth-child(1) label {
+    left: 10px;
+}
+.slide_tolkien li:nth-child(2) label {
+    left: 30px;
+}
+.slide_tolkien li:nth-child(3) label {
+    left: 50px;
+}
+
+.citation_tolkien_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+q {
+    max-width: 600px;
+    font-family: 'Gwendolyn', cursive;
+    font-size: 24px;
+    text-shadow: 0px 0px 1px var(--cor-citacao);
+}
+.body_center {
+    display:flex;
+    justify-content: center;
+}
+.linha_divisoria {
+    background-color: #181717;
+    width: 500px;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#biografia_text {
+    display: flex;
+    justify-content: center;
+}
+
+#biografia_text dl {
+    max-width: 990px;
+    padding-right: 20px;
+}
+
+#biografia_text dt h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Gwendolyn', cursive;
+    text-shadow: 1px 0px 3px #7a7878;
+}
+#biografia_text .image_tolkien1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#biografia_text .image_tolkien1 img {
+    width: 40%;
+    height: auto;
+}
+figcaption {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+#obras {
+    display:flex;
+    justify-content: center;
+}
+
+#obras dl {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 990px;
+}
+
+#obras_titulo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Gwendolyn', cursive;
+    text-shadow: 1px 0px 3px #7a7878;
+}
+.obrass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.obras_left {
+    display:flex;
+    justify-content: center;
+    max-width: 830px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.obras_left_silmarillion {
+    display:flex;
+    justify-content: flex-start;
+    max-width: 870px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.obras_text_left {
+    flex: 2;
+    line-height: 25px;
+    margin-right: 20px;
+}
+.silmarillion_image img {
+    width: 150px;
+    height: auto;
+    margin-left: 30px;
+}
+
+.obras_right {
+    display:flex;
+    max-width: 780px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.obras_text_right {
+    flex: 2;
+    line-height: 25px;
+}
+
+.hobbit_image img {
+    width: 120px;
+    height: auto;
+    margin-right: 30px;
+}
+.obras_titulo_in_text {
+    display: flex;
+    align-self: flex-start;
+    font-size: 20px;
+    background-image: linear-gradient(80deg, #7a7878, #FFFFFF);
+}
+
+.contos_image img {
+    width: 190px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.contos {
+    max-width: 900px;
+}
+
+.tolkien_other_works {
+    display: flex;
+    align-self: flex-start;
+}
+.other_works {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 30px;
+}
+
+.container h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#legado {
+    font-size: 50px;
+    font-family: 'Gwendolyn', cursive;
+    text-shadow: 1px 0px 3px #7a7878;
+}
+.legado_texto {
+    line-height: 25px;
+    padding: 0px 20px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.citacao_rowling {
+    width: 70%;
+    height: auto;
+    display:flex;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.citacao_tolkien_2 {
+    display:flex;
+    justify-content: center;
+}
+
+.citacao_tolkien_2 q {
+    text-align: center;
+}
+
+footer {
+    display:flex;
+    justify-content: center;
+    
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 80%;
+    height: auto;
+    background-color: #a79e9e;
+    padding: 15px;
+}
+
+.topo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer_icons a {
+    margin-right: 10px;
+}
+footer a {
+    text-decoration: none;
+    font-size: 14px;
+    color:#181717;
+}
+footer a:hover {
+    color:#7a7878;
+}
+
+.menuMobile {
+    display: none;
+    width: 60px;
+    height: 60px;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.mm_line {
+    height: 2px;
+    background-color: #333232;
+}
+
+@media (max-width: 900px) {
+    .obras_left_silmarillion {
+        display:flex;
+        flex-direction: column;
+        max-width: 870px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .obras_text_left {
+        line-height: 25px;
+        margin-right: 20px;
+        order: 1;
+    }
+    .silmarillion_image {
+        align-self: center;
+        margin: 10px;
+    }
+    .obras_right {
+        display:flex;
+        flex-direction: column;
+        max-width: 780px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .hobbit_image {
+        align-self: center;
+        margin: 10px;
+    }
+    .obras_left {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 830px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .contos_image {
+        align-self: center;
+        margin: 10px;
+    }
+    
+    header {
+        justify-content: space-between;
+        height: auto;
+    }
+    .tolkien_logo {
+        max-width: 290px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .menu {
+        display:none;
+    }
+    .mobileMenu {
+        display: flex;
+        height: auto;
+    }
+    .mobileMenu nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mobileMenu ul {
+        display: none;
+        padding: 5px;
+    }
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .footer_content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .footer_contato {
+        padding-bottom: 20px;
+    }
+    footer .footer_icons {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #slide {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .tolkien_logo img {
+        width: 90px;
+        padding-left: 0px;
+    }
+    
+    header {
+        justify-content: space-around;
+        height: auto;
+    }
+    
+}
