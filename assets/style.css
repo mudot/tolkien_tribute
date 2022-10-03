@@ -445,6 +445,15 @@ footer a:hover {
     .mobileMenu ul {
         display: none;
         padding: 5px;
+        
+    }
+    .mobileMenu ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color:#181717;
+    }
+    .mobileMenu ul li a:hover {
+        color: #686464;
     }
     .menuMobile {
         display: flex;
@@ -477,6 +486,7 @@ footer a:hover {
 @media (max-width: 425px) {
     .tolkien_logo img {
         width: 90px;
+        height: auto;
         padding-left: 0px;
     }
     
