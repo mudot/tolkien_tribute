@@ -432,6 +432,10 @@ footer a:hover {
         padding-left: 20px;
         padding-top: 10px;
     }
+    #biografia_text .image_tolkien1 img {
+        width: 80%;
+        height: auto;
+    }
     .menu {
         display:none;
     }
